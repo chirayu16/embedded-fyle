@@ -9196,12 +9196,21 @@ table th {
 
 @media screen and (min-width: 1024px) {
   .navbar {
-    margin: 48px 160px 112px 160px;
+    margin: 24px 80px 0px 80px;
     padding: 12px 24px;
     border-radius: 64px;
     align-items: stretch;
     display: flex;
     justify-content: space-between;
+    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar.hidden {
+    transform: translateY(-130%);
   }
   .navbar-end {
     margin-inline-start: 0;
@@ -9256,6 +9265,7 @@ table th {
   line-height: 48px;
   text-align: center;
   color: #FFFFFF;
+  font-weight: 600;
 }
 .cell .container1 .stacked-cards {
   height: 5rem;
@@ -9307,7 +9317,7 @@ table th {
 }
 .cell .container1 .about {
   width: 100%;
-  height: 168px;
+  height: auto;
   margin: 24px auto 32px auto;
   text-align: center;
   font-weight: 400;
@@ -9327,6 +9337,38 @@ table th {
   background-color: #ff3366;
 }
 
+@media screen and (min-width: 1024px) {
+  .cell.cell1 {
+    width: 60%;
+    height: 712px;
+    margin: 180px auto 0 auto;
+  }
+  .cell .container1 .heading1 {
+    font-size: 64px;
+    line-height: normal;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .cell .container1 .stacked-cards {
+    width: 80%;
+  }
+  .cell .container1 .stacked-cards .stacked-card {
+    height: 72px;
+    font-weight: 600;
+    font-size: 44px;
+    color: #0B0B17;
+    line-height: normal;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .cell .container1 .about {
+    width: 80%;
+    margin-top: 48px;
+    line-height: normal;
+    font-size: 16px;
+  }
+}
 @keyframes card-elevation-animation {
   0% {
     transform: translateY(0) translateZ(0) scale(1);
