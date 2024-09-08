@@ -9253,8 +9253,8 @@ table th {
 }
 
 .cell.cell1 {
-  width: 342px;
-  height: 486px;
+  width: 85%;
+  height: auto;
   margin: 48px auto 32px auto;
 }
 .cell .container1 {
@@ -9397,70 +9397,52 @@ table th {
   }
 }
 .cell.cell2 {
-  width: 90%;
-  height: 100%;
-  margin: 32px auto;
+  width: 85%;
+  height: auto;
+  margin: 0px auto;
 }
 
-.container2 {
-  height: 50vmin;
-  position: relative;
-  overflow: hidden;
+.handle {
+  background-color: #fff;
+  border: 1px solid #742eff;
+  border-radius: 4px;
+  box-shadow: 2px 4px 4px 2px hsla(0, 0%, 72%, 0.25);
+  height: 36px;
+  width: 33px;
+  stroke: #742eff;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+.before,
+.after {
+  margin: 0;
+}
+
+.before figcaption,
+.after figcaption {
+  background: #742EFF;
+  border-radius: 4px;
+  color: #FFFFFF;
+  opacity: 0.8;
+  padding: 8px 12px;
   position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  line-height: 100%;
+  font-size: 12px;
 }
 
-/* Starting point */
-img + img {
-  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+.before figcaption {
+  left: 12px;
 }
 
-input[type=range] {
-  position: relative;
-  -webkit-appearance: none;
-  width: calc(100% + 40px);
-  height: 100%;
-  background-color: transparent;
-  outline: none;
+.after figcaption {
+  right: 12px;
 }
 
-/* WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 45px;
-  width: 45px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 3px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  background-size: contain;
-  cursor: ew-resize;
-}
-
-/* Firefox */
-input[type=range]::-moz-range-thumb {
-  height: 45px;
-  width: 45px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 3px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  background-size: contain;
-  cursor: ew-resize;
-}
-
-/* IE */
-input[type=range]::-ms-thumb {
-  height: 45px;
-  width: 45px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 3px solid red;
-  border-radius: 50%;
-  background-size: contain;
-  cursor: ew-resize;
+.whitelabel-before-after {
+  --divider-width:6px;
+  --divider-color:#742eff;
+  cursor: grab;
 }
 
 .cell.cell3 {
@@ -9485,11 +9467,6 @@ input[type=range]::-ms-thumb {
   line-height: normal;
   color: #FBFBFB;
   font-weight: 600;
-}
-.cell.cell3 .container3 .image {
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: static;
 }
 .cell.cell3 .container3 .child-container {
   display: flex;
@@ -9521,6 +9498,9 @@ input[type=range]::-ms-thumb {
 }
 .cell.cell4 .container4 {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .cell.cell4 .container4 .heading4 {
   font-size: 22px;
@@ -9532,7 +9512,7 @@ input[type=range]::-ms-thumb {
 
 :root {
   --marquee-width: 100vw;
-  --marquee-height: 30px;
+  --marquee-height: 20vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
@@ -9541,17 +9521,18 @@ input[type=range]::-ms-thumb {
 
 .marquee {
   width: var(--marquee-width);
-  height: var(--marquee-height);
-  background-color: #111;
+  height: auto;
+  background-color: transparent;
   color: #eee;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
 .marquee:before, .marquee:after {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 10rem;
   height: 100%;
   content: "";
   z-index: 1;
@@ -9559,10 +9540,12 @@ input[type=range]::-ms-thumb {
 
 .marquee:before {
   left: 0;
+  background: linear-gradient(to right, #161732 0%, transparent 100%);
 }
 
 .marquee:after {
   right: 0;
+  background: linear-gradient(to left, #161732 0%, transparent 100%);
 }
 
 .marquee-content {
@@ -9573,7 +9556,7 @@ input[type=range]::-ms-thumb {
 }
 
 /* .marquee-content:hover {
-  animation-play-state: paused;
+animation-play-state: paused;
 } */
 @keyframes scrolling {
   0% {
@@ -9593,9 +9576,12 @@ input[type=range]::-ms-thumb {
   max-height: 100%;
   font-size: calc(var(--marquee-height) * 3 / 4); /* 5rem; */
   white-space: nowrap;
+  margin: 0 20px;
 }
 
 .marquee-content li img {
   width: 100%;
   /* height: 100%; */
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Keyframes to create the continuous scrolling effect *//*# sourceMappingURL=styles.css.map */

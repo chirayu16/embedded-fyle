@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Bulma!</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
     <link rel="stylesheet" href="src/styles.css">
   </head>
   <body>
     <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://www.fylehq.com">
+        <a class="navbar-item" href="https://www.fylehq.com"> 
           <svg width="179" height="32" viewBox="0 0 179 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M37.2515 6.69191V10.2137H42.6229V13.802H37.2515V23.9688H33.5565V6.69191C33.5565 4.63197 35.2672 2.9375 37.4226 2.9375H44.0599V6.55901H37.4226C37.3199 6.52578 37.2515 6.59223 37.2515 6.69191Z" fill="black"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M58.4977 31.2005H48.5075V27.5789H58.4977C58.5661 27.5789 58.6687 27.5125 58.6687 27.4128V24.8877H49.6707C47.5495 24.8877 45.8047 23.1933 45.8047 21.1333V9.13916H49.4997V21.1666C49.4997 21.2662 49.5681 21.3659 49.705 21.3659H58.4977C58.5661 21.3659 58.6687 21.2995 58.6687 21.1666V9.13916H62.3637V27.446C62.3295 29.506 60.6189 31.2005 58.4977 31.2005Z" fill="black"/>
@@ -73,17 +75,25 @@
           </div>    
         </div>
         <div class="cell cell2">
-          <div class="container2">
-            <img src="assets/Component 6.svg" alt="">
-            <img id="compare" src="assets/dashboard 2.svg" alt="">
-            <input type="range" min="0" max="100" value="50" id="slider" oninput="slide()">
-          </div>
+          <img-comparison-slider class="whitelabel-before-after">
+          <figure slot="first" class="before">
+            <img width="100%" src="assets/Component 6.svg">
+            <figcaption>Fyle UI</figcaption>
+          </figure>
+          <figure slot="second" class="after">
+            <img width="100%" src="assets/dashboard 2.svg">
+            <figcaption>Your company's UI</figcaption>
+          </figure>
+          <svg slot="handle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="handle">
+            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+            <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+            <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          </svg>
+          </img-comparison-slider>
         </div>
         <div class="cell cell3">
           <div class="container3">
-            <div class="heading2">
-              Powerful expense management, the way you prefer
-            </div>
+            <div class="heading2">Powerful expense management, the way you prefer</div>
             <img src="assets/White-labeled.png" alt="image" class="image">
             <div class="child-container">
               <span class="child-heading">
@@ -108,24 +118,83 @@
             <span class="heading4">Trusted by Thousands of Customers</span>
             <div class="marquee">
               <ul class="marquee-content">
-                <li><img src="assets/marquee-logos/datastax1.png" alt="Logo 1"></li>
-                <li><img src="assets/marquee-logos/tst2.png" alt="Logo 2"></i></li>
-                <li><img src="assets/marquee-logos/centric3.png" alt="Logo 3"></li>
-                <li><img src="assets/marquee-logos/aprio4.png" alt="Logo 4"></li>
-                <li><img src="assets/marquee-logos/printerlogic 5.png" alt="Logo 5"></li>
-                <li><img src="assets/marquee-logos/sprenger6.png" alt="Logo 3"></li>
-                <li><img src="assets/marquee-logos/sprenger6.png" alt="Logo 3"></li>
-                <li><img src="assets/marquee-logos/encore7.png" alt="Logo 1"></li>
-                <li><img src="assets/marquee-logos/E3-8.png" alt="Logo 2"></li>
-                <li><img src="assets/marquee-logos/surterre9.png" alt="Logo 3"></li>
-                <li><img src="assets/marquee-logos/may mobility10.png" alt="Logo 1"></li>
-                <li><img src="assets/marquee-logos/Williams Homes11.png" alt="Logo 2"></li>
-                <li><img src="assets/marquee-logos/disruptive12.png" alt="Logo 3"></li>
+                <li><img src="assets/marquee-logos/datastax1.png" alt=""></i></li>
+                <li><img src="assets/marquee-logos/tst2.png" alt=""></li>
+                <li><img src="assets/marquee-logos/centric3.png" alt=""></li>
+                <li><img src="assets/marquee-logos/aprio4.png" alt=""></li>
+                <li><img src="assets/marquee-logos/printerlogic 5.png" alt=""></li>
+                <li><img src="assets/marquee-logos/sprenger6.png" alt=""></li>
+                <li><img src="assets/marquee-logos/encore7.png" alt=""></li>
+                <li><img src="assets/marquee-logos/E3-8.png" alt=""></li>
+                <li><img src="assets/marquee-logos/surterre9.png" alt=""></li>
+                <li><img src="assets/marquee-logos/may mobility10.png" alt=""></li>
+                <li><img src="assets/marquee-logos/Williams Homes11.png" alt=""></li>
+                <li><img src="assets/marquee-logos/disruptive12.png" alt=""></li>
               </ul>
           </div>
-        </div>
+            <!-- <div class="marquee-container">
+              <div class="marquee-content">
+                <img class ="img-pos" src="assets/marquee-logos/datastax1.png" alt="Image 1">
+                <img class ="img-pos" src="image2.jpg" alt="Image 2">
+                <img class ="img-pos" src="image3.jpg" alt="Image 3">
+                <img class ="img-pos" src="image4.jpg" alt="Image 4">
+                <img class ="img-pos" src="image5.jpg" alt="Image 5">
+                <img class ="img-pos" src="image6.jpg" alt="Image 6">
+                <img class ="img-pos" src="image7.jpg" alt="Image 7">
+                <img class ="img-pos" src="image8.jpg" alt="Image 8">
+                <img class ="img-pos" src="image9.jpg" alt="Image 9">
+                <img class ="img-pos" src="image10.jpg" alt="Image 10">
+                <img class ="img-pos" src="image11.jpg" alt="Image 11">
+                <img class ="img-pos" src="image12.jpg" alt="Image 12">
+                 
+                <img class ="img-pos" src="assets/marquee-logos/datastax1.png" alt="Image 1">
+                <img class ="img-pos" src="image2.jpg" alt="Image 2">
+                <img class ="img-pos" src="image3.jpg" alt="Image 3">
+                <img class ="img-pos" src="image4.jpg" alt="Image 4">
+                <img class ="img-pos" src="image5.jpg" alt="Image 5">
+                <img class ="img-pos" src="image6.jpg" alt="Image 6">
+                <img class ="img-pos" src="image7.jpg" alt="Image 7">
+                <img class ="img-pos" src="image8.jpg" alt="Image 8">
+                <img class ="img-pos" src="image9.jpg" alt="Image 9">
+                <img class ="img-pos" src="image10.jpg" alt="Image 10">
+                <img class ="img-pos" src="image11.jpg" alt="Image 11">
+                <img class ="img-pos" src="image12.jpg" alt="Image 12">
+              </div> 
+            </div>  -->
+          
           </div>
       </div>
+        <!-- <div class="cell cell2">
+          <div class="container2">
+            <img src="assets/Component 6.svg" alt="">
+            <img id="compare" src="assets/dashboard 2.svg" alt="">
+            <input type="range" min="0" max="100" value="50" id="slider" oninput="slide()">
+          </div>
+        </div>  -->
+        <!-- <div class="cell cell3">
+          <div class="container3">
+            <div class="heading2">
+              Powerful expense management, the way you prefer
+            </div>
+            <img src="assets/White-labeled.png" alt="image" class="image">
+            <div class="child-container">
+              <span class="child-heading">
+                White-labeled expense management 
+              </span>
+              <div class="child-para">
+                A ready-to-use expense management platform that automates expense reporting, credit card reconciliation, reimbursements, accounting and more - all on customers’ existing credit cards. 
+              </div>
+            </div>
+            <div class="child-container">
+              <span class="child-heading">
+                Expense API 
+              </span>
+              <div class="child-para">
+                Use Fyle’s API to craft a customized, all-in-one expense management solution that fits into your offering, fulfils your customers’ needs, and integrates seamlessly with your stack.  
+              </div>
+            </div>
+          </div>
+        </div> -->
     </div>
     <script src="src/script.js"></script>
   </body>
