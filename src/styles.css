@@ -9344,8 +9344,8 @@ table th {
 @media screen and (min-width: 1024px) {
   .cell.cell1 {
     width: 60%;
-    height: 712px;
-    margin: 180px auto 0 auto;
+    height: auto;
+    margin: 180px auto 96px auto;
   }
   .cell .container1 .heading1 {
     font-size: 64px;
@@ -9445,6 +9445,11 @@ table th {
   cursor: grab;
 }
 
+@media screen and (min-width: 1024px) {
+  .cell.cell2 {
+    width: 70vw;
+  }
+}
 .cell.cell3 {
   width: 100%;
   height: auto;
@@ -9468,25 +9473,69 @@ table th {
   color: #FBFBFB;
   font-weight: 600;
 }
-.cell.cell3 .container3 .child-container {
+.cell.cell3 .container3 .c3-c1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cell.cell3 .container3 .c3-c1 .c3-c1-c1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cell.cell3 .container3 .c3-c1 .c3-c1-c1 .child-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
 }
-.cell.cell3 .container3 .child-container .child-heading {
+.cell.cell3 .container3 .c3-c1 .c3-c1-c1 .child-container .child-heading {
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 600;
   line-height: normal;
 }
-.cell.cell3 .container3 .child-container .child-para {
+.cell.cell3 .container3 .c3-c1 .c3-c1-c1 .child-container .child-para {
   font-size: 16px;
   color: #FBFBFB;
   font-weight: 400;
   line-height: normal;
 }
 
+@media screen and (min-width: 1024px) {
+  .cell.cell3 {
+    width: 100%;
+    padding: 12px;
+  }
+  .cell.cell3 .container3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .cell.cell3 .container3 .heading2 {
+    width: 60%;
+    font-size: 40px;
+  }
+  .cell.cell3 .container3 .c3-c1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .cell.cell3 .container3 .c3-c1 .c3-c1-c1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+  .cell.cell3 .container3 .c3-c1 .c3-c1-c1 .child-container {
+    width: 80%;
+  }
+  .cell.cell3 .container3 .c3-c1 .c3-c1-c1 .child-container .child-heading {
+    font-size: 24px;
+  }
+  .cell.cell3 .container3 .c3-c1 .c3-c1-c1 .child-container .child-para {
+    font-size: 16px;
+  }
+}
 .cell.cell4 {
   display: flex;
   flex-direction: column;
@@ -9494,7 +9543,7 @@ table th {
   align-items: center;
   width: 100%;
   height: auto;
-  margin: 48px auto auto auto;
+  margin: 48px auto 48px auto;
 }
 .cell.cell4 .container4 {
   width: 100%;
@@ -9581,7 +9630,10 @@ animation-play-state: paused;
 
 .marquee-content li img {
   width: 100%;
-  /* height: 100%; */
 }
 
-/* Keyframes to create the continuous scrolling effect *//*# sourceMappingURL=styles.css.map */
+@media screen and (min-width: 1024px) {
+  .cell.cell4 .container4 .heading4 {
+    font-size: 32px;
+  }
+}/*# sourceMappingURL=styles.css.map */
