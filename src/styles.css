@@ -9722,7 +9722,12 @@ animation-play-state: paused;
   .cell.cell11 .container .c11 {
     display: flex;
     flex-direction: row;
-    gap: 56px;
+    gap: 72px;
+  }
+  .cell.cell11 .container .c11 .c11-c11 .para {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .cell.cell11 .container .c11 .c11-c11 .para .para-heading {
     font-size: 20px;
