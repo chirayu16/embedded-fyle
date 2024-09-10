@@ -667,15 +667,21 @@ $line-height-nav:20px;
                 .c11{
                     display: flex;
                     flex-direction: row;
-                    gap: 56px;
+                    gap: 72px;
 
                     .c11-c11{
                         .para{
+                            display: inline-flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+
                             .para-heading{
-                                font-size: 20px
+                                
+                                font-size: 20px;
                             }
                             .para-description{
                                 font-size: 16px;
+                                
                             }
                         }
                     }
