@@ -6,7 +6,8 @@
 @use "../node_modules/bulma/sass/grid/grid.scss";
 
 
-$bg-color: #161732;
+$bg-color-1: #161732;
+$bg-color-2: #FFFFFF;
 $nav-bg: #FFFFFF;
 $btn-clr: #FF3366;
 $btn-font-clr:#FFFFFF;
@@ -18,8 +19,16 @@ $font-size-nav: 14px;
 $font-weight-nav: 600;
 $line-height-nav:20px;
 
+.section-1-bg-color{
+    background-color: $bg-color-1;
+}
+
+.section-2-bg-color{
+    background-color: $bg-color-2;
+}
+
 :root {
-    --bulma-body-background-color : #{$bg-color};
+    --bulma-body-background-color : #{$bg-color-1};
     --bulma-body-family:#{$font-family};
     --bulma-body-weight:#{$font-weight};
 }
@@ -339,7 +348,6 @@ $line-height-nav:20px;
 
 
 
-
 @media screen and (min-width: 1024px) {
     .cell {
         &.cell2{
@@ -380,6 +388,11 @@ $line-height-nav:20px;
                     display: flex;
                     flex-direction: column;
                     gap: 24px;
+
+                    .image{
+                        width: 100%;
+                        height: auto;
+                    }
 
                     .c3-c1-c1{
                         display: flex;
@@ -442,6 +455,10 @@ $line-height-nav:20px;
                         display: flex;
                         flex-direction: row-reverse;
 
+                        .image{
+                            width: 50%;
+                            height: 60%;
+                        }
                         .c3-c1-c1 {
                             display: flex;
                             flex-direction: column;
@@ -568,3 +585,110 @@ $line-height-nav:20px;
             }
         }
     }
+
+.cell {
+        &.cell11{
+            width: 90%;
+            height: auto;
+            background-color: $bg-color-1;
+            margin: 48px auto;
+            border-radius: 24px;
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px 20px 0px 20px;
+                gap: 24px;
+
+                .header{
+                    font-size: 32px;
+                    line-height: 40px;
+                    color: #FFFFFF;
+                }
+
+                .c11{
+                    .c11-c11{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        margin-bottom: 32px;
+                        .para{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                        .para-heading{
+                            font-size: 20px;
+                            line-height: 24px;
+                            color:  #FFFFFF;
+                        }
+                        .para-description{
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: 400;
+                            color: #FBFBFB;
+                        }
+                    }
+                }
+                .c11-c12{
+                    display: flex;
+                    width: 100%;
+
+                    img{
+                        flex-grow: 1;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .cell {
+        &.cell11{
+            width: 80%;
+            margin: 80px auto;
+
+            .container{
+                display: flex;
+                gap: 64px;
+                flex-direction: column;
+                margin: 72px 0 0 96px;
+
+                .header{
+                    margin-right: 272px;
+                    font-size: 36px;
+                    line-height: 40px;
+                    color: #FFFFFF;
+                }
+                .c11{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 56px;
+
+                    .c11-c11{
+                        .para{
+                            .para-heading{
+                                font-size: 20px
+                            }
+                            .para-description{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .c11-c12{
+                        display: flex;
+                        img{
+                            flex-grow: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
