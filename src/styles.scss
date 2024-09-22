@@ -5,6 +5,7 @@
 @use "../node_modules/bulma/sass/grid/columns.scss";
 @use "../node_modules/bulma/sass/grid/grid.scss";
 @use "../node_modules/bulma/sass/elements/content.scss";
+@use "../node_modules/bulma/sass/helpers/visibility.scss";
 
 
 $bg-color-1: #161732;
@@ -738,7 +739,49 @@ $line-height-nav:20px;
 //     }
 // }
 
+.cell {
+    &.cell12{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        
+        .container{
+            .heading{
+                font-weight: 600;
+                font-size: 32px;
+                color: #0B0B17;
+                line-height: normal;
+                text-align: center;
+                padding: 0 12px;
+                margin-bottom: 24px;
+            }
+            .c121{
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+
+                .c121-heading{
+                    font-size: 20px;
+                    color: #0B0B17;
+                }
+                .content{
+                    
+                    color:#0B0B17;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
+
+    .mobile-view{
+        display:none;
+    }
 
     .cell {
         &.cell12{
