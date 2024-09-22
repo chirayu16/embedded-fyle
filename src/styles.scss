@@ -5,6 +5,7 @@
 @use "../node_modules/bulma/sass/grid/columns.scss";
 @use "../node_modules/bulma/sass/grid/grid.scss";
 @use "../node_modules/bulma/sass/elements/content.scss";
+@use "../node_modules/bulma/sass/helpers/visibility.scss";
 
 
 $bg-color-1: #161732;
@@ -700,6 +701,44 @@ $line-height-nav:20px;
 
 }
 
+// .cell {
+//     &.cell12{
+//         width: 90%;
+//         margin: 0 auto;
+//         height: auto;
+        
+//         .container{
+//             .heading{
+//                 font-weight: 600;
+//                 font-size: 32px;
+//                 color: #0B0B17;
+//                 line-height: normal;
+//                 text-align: center;
+//                 padding: 0 12px;
+//                 margin-bottom: 24px;
+//             }
+//             .c121{
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 28px;
+
+//                 .c121-heading{
+//                     font-size: 20px;
+//                     color: #0B0B17;
+//                 }
+//                 .content{
+                    
+//                     color:#0B0B17;
+//                     font-size: 16px;
+//                     font-weight: 400;
+//                     line-height: normal;
+//                 }
+//             }
+
+//         }
+//     }
+// }
+
 .cell {
     &.cell12{
         width: 90%;
@@ -734,6 +773,101 @@ $line-height-nav:20px;
                 }
             }
 
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .mobile-view{
+        display:none;
+    }
+
+    .cell {
+        &.cell12{
+            width: 80%;
+            margin: 0 auto;
+
+            .container{
+                
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin: 0 auto;
+
+                .heading22{
+
+                    padding-bottom: 60px;
+                    font-weight: 600;
+                    color:#0B0B17;
+                    font-size: 48px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .container-main{
+                    display: flex;
+                    width: 100%;
+
+                    .image-container{
+                        margin-right: 20px;
+                        width: 50%;
+
+                        img{
+                            width: 90%;
+                            height: auto; /* Maintains aspect ratio */
+                        }
+
+                    }
+                    .progress-container{
+                        max-width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px; /* Space between progress bar containers */
+                        margin: 70px 0;
+
+                        .progress-bar-container {
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 20px;
+
+                            .progress-bar{
+
+                                border-radius: 4px;
+                                height: 32px; /* Initial height */
+                                width: 8px !important; /* Width of the progress bar */
+                                background-color: #D4D4E2; /* Grey background */
+                                transition: height 2s ease-in-out; /* Smooth height transition */
+                                margin-right: 10px; /* Space between progress bar and text container */
+                            }
+                            .text-container{
+
+                                h3{
+                                    color:  #0B0B17;
+                                    font-size: 18px;
+                                    line-height: normal;
+                                    font-weight: 600;
+                                    margin-bottom: 12px;
+                                }
+
+                                display: flex;
+                                flex-direction: column; /* Stack heading and subheadings vertically */
+
+                                .subheadings{
+                                    display: none;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: #393A54;;
+                                }
+
+                            }
+                        }
+  
+                    }
+
+                }
+                        
+            }
         }
     }
 }
