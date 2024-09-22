@@ -10460,7 +10460,7 @@ animation-play-state: paused;
     width: 100%;
     margin: 0 auto;
   }
-  .cell.cell12 .container .heading {
+  .cell.cell12 .container .heading22 {
     padding-bottom: 60px;
     font-weight: 600;
     color: #0B0B17;
@@ -10497,7 +10497,7 @@ animation-play-state: paused;
     height: 32px; /* Initial height */
     width: 8px !important; /* Width of the progress bar */
     background-color: #D4D4E2; /* Grey background */
-    transition: height 1s ease-in-out; /* Smooth height transition */
+    transition: height 2s ease-in-out; /* Smooth height transition */
     margin-right: 10px; /* Space between progress bar and text container */
   }
   .cell.cell12 .container .container-main .progress-container .progress-bar-container .text-container {
@@ -10509,6 +10509,7 @@ animation-play-state: paused;
     font-size: 18px;
     line-height: normal;
     font-weight: 600;
+    margin-bottom: 12px;
   }
   .cell.cell12 .container .container-main .progress-container .progress-bar-container .text-container .subheadings {
     display: none;

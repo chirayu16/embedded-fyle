@@ -61,7 +61,7 @@ let lastScrollTop = 0;
                 // Move to the next progress bar
                 currentIndex = (currentIndex + 1) % progressBars.length; // Loop back to first after last
                 fillProgressBar(); // Start filling the next progress bar
-            }, 2000); // Wait for 2 seconds before resetting
+            }, 3000); // Wait for 2 seconds before resetting
         }
         
         // Start filling the first progress bar

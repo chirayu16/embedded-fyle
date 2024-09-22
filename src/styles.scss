@@ -795,7 +795,7 @@ $line-height-nav:20px;
                 width: 100%;
                 margin: 0 auto;
 
-                .heading{
+                .heading22{
 
                     padding-bottom: 60px;
                     font-weight: 600;
@@ -837,7 +837,7 @@ $line-height-nav:20px;
                                 height: 32px; /* Initial height */
                                 width: 8px !important; /* Width of the progress bar */
                                 background-color: #D4D4E2; /* Grey background */
-                                transition: height 1s ease-in-out; /* Smooth height transition */
+                                transition: height 2s ease-in-out; /* Smooth height transition */
                                 margin-right: 10px; /* Space between progress bar and text container */
                             }
                             .text-container{
@@ -847,6 +847,7 @@ $line-height-nav:20px;
                                     font-size: 18px;
                                     line-height: normal;
                                     font-weight: 600;
+                                    margin-bottom: 12px;
                                 }
 
                                 display: flex;
